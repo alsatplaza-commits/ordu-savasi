@@ -1,0 +1,65 @@
+==================================================
+ORDU SAVAŞI v3 — 3B Strateji + Doğrudan Kontrol
+==================================================
+Poco X7 Pro / Android Chrome için. İnternet GEREKMEZ (CDN yok, her şey klasörde).
+
+KLASÖR
+  ordu-v3/
+    index.html               → ANA OYUN (tam kalite, assets klasörünü kullanır)
+    assets/                  → dokular, yükseklik haritaları, gökyüzü, müzik, sesler
+    ordu-v3-tek-dosya.html   → TEK DOSYA yedek (orta kalite, 3 müzik, her yerden açılır)
+    NASIL-OYNANIR.txt
+
+KURULUM (telefonda)
+  1) ordu-v3.zip'i telefona at (USB / Drive / Telegram) ve Dosyalar uygulamasıyla
+     "Çıkart" de → Download/ordu-v3/ klasörü oluşur.
+  2) EN İYİ YOL: Chrome adres çubuğuna yaz:
+        file:///sdcard/Download/ordu-v3/index.html
+     (Chrome dosya izni isterse "İzin ver".) → tam kalite, 7 müzik, 2048 dokular.
+  3) Dosyalar uygulamasından index.html'e dokunup açtıysan ve menüde
+     "Varlık paketi bulunamadı" yazıyorsa iki çözüm var:
+       a) ordu-v3-tek-dosya.html dosyasını aç (her zaman çalışır), VEYA
+       b) Menüdeki "📦 Tam paketi yükle (ordu-v3.zip seç)" → zip'i seç.
+          Paket bir kez telefona (IndexedDB) kopyalanır, sonra hep tam kalite.
+  4) Telefonu YATAY tut. Chrome ⋮ → "Ana ekrana ekle" ile uygulama gibi aç.
+
+KONTROLLER
+  Kamera : 1 parmak sürükle = kaydır • 2 parmak sıkıştır = zoom
+           2 parmak döndür = çevir • 2 parmak yukarı/aşağı = eğim
+  Seçim  : birliğe dokun • aynı birliğe çift dokun = ekrandaki aynı tür
+           ⬚ Kutu = alan seç • ⚔️ Tümü = tüm ordu • ✖ = seçimi bırak
+  Emir   : boş yere dokun = git • düşmana dokun = saldır
+           uzun bas = saldırarak ilerle • 🎯 Saldırı AÇIK = hep saldırarak ilerle
+  Sağ panel: birlik üret (💰), 🗼 Kule kur, 🚩 Toplanma noktası
+  Mini harita: dokun = oraya git
+
+🎮 KONTROL ET (FPS/TPS hibrit)
+  Tek birlik seç → 🎮 Kontrol Et. Sol yarı = hareket kolu, sağ yarı = nişan,
+  🔥 ATEŞ (basılı tut), özel tuş: 💣 el bombası (piyade/komutan),
+  💨 sis + onarım (araçlar), 🚀 roket salvosu (helikopter). Hasar +%50.
+  ↩ Komuta = RTS kamerasına dön.
+
+BİRLİKLER
+  🪖 Piyade Timi  🚀 Roketatar (araç/hava avcısı)  🛞 Tank  🎯 Uçaksavar
+  💥 Topçu (uzun menzil)  🚁 Helikopter  ⭐ Komutan (komando görevleri)
+
+FRAKSİYONLAR (🎖️ Komutan ekranından seç)
+  🛡️ Demir Pençe : zırh +%25, tank ucuz, yapılar dayanıklı
+  🌪️ Rüzgar Klanı: %20 hızlı, piyade/roket hasarı +%20, helikopter ucuz
+  🌳 Kök Toprak  : gelir +%30, piyade ucuz, birlikler kendini onarır
+
+KAMPANYA: 120 prosedürel görev
+  Türler: 🏰 Karargahı Yok Et • 🚩 Bölge Tut • 🛡️ Savunma (dalgalar)
+          🎯 Komando Baskını • ⚔️ Büyük Savaş (her 10. görev, 2 düşman)
+  Bölgeler: Ova, Çöl, Kara Orman, Kar Cephesi, Volkan
+  Gün/gece döngüsü, sis/yağmur/fırtına/kar. Yıldız → 🎖️ madalya → teknoloji.
+
+⚔️ SERBEST SAVAŞ: bölge, tür, düşman sayısı, saat, hava, zorluk seç.
+
+KAYIT: otomatik (30 sn) + 💾 tuşu → IndexedDB (yedek localStorage).
+  Ana menü → "Devam Et" kaldığın savaşa döner.
+
+SERBEST OYUN (HİLE): Ayarlar → Serbest oyun AÇIK
+  → sınırsız kaynak, tüm görev ve birlikler açık, hızlı üretim. Varsayılan KAPALI.
+
+GRAFİK: Ayarlar → Düşük / Orta / Yüksek. FPS düşerse çözünürlük otomatik ayarlanır.
