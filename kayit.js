@@ -11,8 +11,8 @@ function imp(){var f=document.createElement("input");f.type="file";f.accept=".js
 /* yedek: IndexedDB'deki kaydi her 30 sn localStorage'a da yansit */
 async function mirror(){try{var o=await dump();for(var k in o.veri)localStorage.setItem(DB+":"+k,JSON.stringify(o.veri[k]))}catch(e){}}
 setInterval(mirror,30000);addEventListener("pagehide",mirror);
-function ui(){var b=document.createElement("div");b.id="kayitBtn";b.textContent="\u{1F4BE}";b.title="Kayit dosyasi";b.style.cssText="position:fixed;left:6px;bottom:6px;z-index:2147483647;width:34px;height:34px;line-height:34px;text-align:center;border-radius:50%;background:rgba(0,0,0,.45);font-size:18px;cursor:pointer;user-select:none";
-var m=document.createElement("div");m.style.cssText="position:fixed;left:6px;bottom:46px;z-index:2147483647;display:none;background:#222;border:1px solid #555;border-radius:10px;padding:6px;font:14px sans-serif";
+function ui(){var b=document.createElement("div");b.id="kayitBtn";b.textContent="\u{1F4BE}";b.title="Kayit dosyasi";b.style.cssText="position:fixed;right:6px;top:6px;z-index:2147483647;width:34px;height:34px;line-height:34px;text-align:center;border-radius:50%;background:rgba(0,0,0,.45);font-size:18px;cursor:pointer;user-select:none";
+var m=document.createElement("div");m.style.cssText="position:fixed;right:6px;top:46px;z-index:2147483647;display:none;background:#222;border:1px solid #555;border-radius:10px;padding:6px;font:14px sans-serif";
 function it(t,fn){var e=document.createElement("div");e.textContent=t;e.style.cssText="color:#fff;padding:10px 14px;cursor:pointer;white-space:nowrap";e.onclick=function(){m.style.display="none";fn()};m.appendChild(e)}
 it("\u2B07 Kaydi dosyaya indir",exp);it("\u2B06 Dosyadan kayit yukle",imp);
 b.onclick=function(){m.style.display=m.style.display==="none"?"block":"none"};document.body.appendChild(m);document.body.appendChild(b)}
